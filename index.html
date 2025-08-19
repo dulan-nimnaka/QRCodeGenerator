@@ -1,23 +1,96 @@
 <!DOCTYPE html>
-<head>
-    <!-- SEO Meta Tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="QR Code Generator - Create QR codes from text or URLs instantly.">
-    <meta name="keywords" content="QR Code, QR Code Generator, Create QR Code, QR Code from URL, QR Code from Text, Dulan Nimnaka">
-    <meta name="author" content="Dulan Nimnaka">
+<html lang="en">
+    <head>
+        <!-- SEO Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="QR Code Generator - Create QR codes from text or URLs instantly.">
+        <meta name="keywords" content="QR Code, QR Code Generator, Create QR Code, QR Code from URL, QR Code from Text, Dulan Nimnaka">
+        <meta name="author" content="Dulan Nimnaka">
 
-    <!-- Favicon -->
-     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='10' fill='%23667eea'/><rect x='20' y='20' width='15' height='15' fill='white'/><rect x='45' y='20' width='10' height='15' fill='white'/><rect x='65' y='20' width='15' height='15' fill='white'/><rect x='20' y='45' width='10' height='10' fill='white'/><rect x='45' y='45' width='15' height='10' fill='white'/><rect x='20' y='65' width='15' height='15' fill='white'/><rect x='45' y='65' width='10' height='15' fill='white'/><rect x='65' y='45' width='15' height='35' fill='white'/></svg>">
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='10' fill='%23667eea'/><rect x='20' y='20' width='15' height='15' fill='white'/><rect x='45' y='20' width='10' height='15' fill='white'/><rect x='65' y='20' width='15' height='15' fill='white'/><rect x='20' y='45' width='10' height='10' fill='white'/><rect x='45' y='45' width='15' height='10' fill='white'/><rect x='20' y='65' width='15' height='15' fill='white'/><rect x='45' y='65' width='10' height='15' fill='white'/><rect x='65' y='45' width='15' height='35' fill='white'/></svg>">
 
-     <title>QR Code Generator</title>
+        <!-- Page Title -->
+        <title>QR Code Generator</title>
 
-    <!-- CSS Stylesheets -->
-     <link rel="Stylesheets" href="style.css">
+        <!-- Font Awosome Fonts -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <!-- CSS Stylesheets -->
+        <link rel="Stylesheets" href="style.css">
 
 
-</head>
+    </head>
 
-<body>
-    
-</body>
+    <body>
+        <!-- Container -->
+        <div class="container">
+            <!--Dark Mode Toggle-->
+            <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+
+        </div>
+
+        <!-- Header -->
+        <div class="header">
+            <h1 class="title">QR Generator</h1>
+            <p class="subtitle">Create QR codes instantly from text or URLs</p>
+
+        </div>
+
+        <!-- Input Form -->
+        <div class="form-group">
+            <div class="input-container">
+                <input
+                    type="text"
+                    id="textInput"
+                    class="input-field"
+                    placeholder="Enter text or URL to generate QR code..."
+                    maxlength="1000"
+                >
+            </div>
+
+            <div class="error-message" id="errorMessage"></div>
+
+        </div>
+
+        <!-- Generate Button -->
+        <button class="btn" id="generateButton">
+            <span id="buttonText">Generate QR Code</span>
+            <div class="loading" id="loadingSpinner" style="display: none;"></div>
+        </button>
+
+        <!-- QR Code Display -->
+        <div class="qr-display" id="qrDisplay">
+            <div class="qr-placeholder" id="qrPlaceholder">
+                <div class="qr-icon">
+                    <i class="fa-solid fa-qrcode"></i>
+
+                </div>
+
+                <div>Your QR code will appear here</div>
+
+
+            </div>
+
+            <canvas id="qr-code" style="display: none;"></canvas>
+        </div>
+
+        <!-- Download Button -->
+        <button class="btn btn-secondary" id="downloadBtn" style="display: none;">
+            <span id="downloadText">Download QR Code</span>
+            <div class="loading" id="downloadSpinner" style="display: none;"></div>
+        </button>
+
+        <!--Footer Section-->
+            <footer>
+                <p>&copy; <span id="year"></span> QRCodeGenerator | Designed by Dulan Nimnaka</p>
+            </footer>
+
+        <!-- JavaScript -->
+         <script src="script.js"></script>
+
+    </body>
+</html>
