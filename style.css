@@ -3,6 +3,14 @@
     --primary-color: #667eea;
     --primary-dark: #5a6fd8;
     --secondary-color: #764ba2;
+    --card-light: #ffffff;
+    --card-dark: #2d3748;
+    --shadow-light: 0, 10px, 25px rgba(0, 0, 0, 0.1);
+    --shadow-dark: 0, 10px, 25px rgba(0, 0, 0, 0.3);
+    --text-light: #2d3748;
+    --text-dark: #f7fafc;
+
+
 
 
 
@@ -26,4 +34,31 @@ body {
     padding: 20px;
     transition: all 0.3s ease; /* Smooth transition for background */
 
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: linear-gradient(135deg, #2d3748, #1a202c);
+}
+
+/* Container Styles */
+.container {
+    background: var(--card-light);
+    border-radius: 20px;
+    box-shadow: var(--shadow-light);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    transition: all 0.3s ease; /* Smooth transition for card */
+    position: relative;
+
+
+}
+
+.dark-mode .container {
+    background: var(--card-dark);
+    box-shadow: var(--shadow-dark);
+    color: var(--text-dark);
+    
 }
