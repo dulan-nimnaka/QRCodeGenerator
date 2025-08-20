@@ -205,5 +205,65 @@ body.dark-mode {
 
 .btn-secondary:hover {
     box-shadow: 0 8px 25px rgba(72, 187, 120, 0.3);
-    
+
 }
+
+/* QR Code Styles */
+.qr-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+    padding: 30px;
+    background: #f7fafc;
+    border-radius: 15px;
+    border: 2px dashed var(--border-light);
+    transition: all 0.3s ease;
+    min-height: 200px;
+
+}
+
+.dark-mode .qr-display {
+    background: #2d3748;
+    border-color: var(--border-dark);
+
+}
+
+
+.qr-display.has-qr { /* When QR code is generated */
+    background: white;
+    border-style: solid;
+    border-color: var(--border-light);
+
+}
+
+.dark-mode .qr-display.has-qr {
+    background: #f7fafc;
+
+}
+
+.qr-placeholder {
+    color: #a0aec0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+
+
+}
+
+.qr-icom {
+    font-size: 3rem;
+    opacity: 0.5;
+
+}
+
+#qr-code { /* QR code image */
+    max-width: 100%;
+    height: auto;
+    /* display: none; /* Hidden by default */
+    border-radius: 10px;
+
+}
+
