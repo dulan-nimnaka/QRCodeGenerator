@@ -156,5 +156,54 @@ body.dark-mode {
 
 .input-field::placeholder {
     color: #a0aec0;
+
+}
+
+/* Button Styles */
+.btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 150px;
+    justify-content: center;
+
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+
+}
+
+.btn:active {
+    transform: translateY(0);
+
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+
+}
+
+/* Download Button Styles */
+.btn-secondary {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    margin-top: 15px;
+
+}
+
+.btn-secondary:hover {
+    box-shadow: 0 8px 25px rgba(72, 187, 120, 0.3);
     
 }
